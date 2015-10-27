@@ -101,8 +101,8 @@ public class PhotosActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-                Log.i("DEBUG", responseString);
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject json) {
+                Log.i("DEBUG", throwable.toString());
                 Toast.makeText(getApplicationContext(), "Couldn't get new photos :(", Toast.LENGTH_LONG).show();
             }
         });
