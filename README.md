@@ -46,6 +46,11 @@ GIFs created with [LiceCap](http://www.cockos.com/licecap/).
 * I had trouble getting the click event expansion and collapse to work correctly at first. On my first attempt I cleared the `ellipsize` and `maxlines` of the view and *all* of the captions were set to expand and show the entire contents. Then I found a way to set it on the correct view and stored the `expandedCaption` metadata on the model of my `InstagramPhoto` object. I'm convinced there must be a better way to do this, as that is not really part of the model but rather just part of the view, related to how that model is displayed.
 * I was initially using `photoJSON.has("user")` to verify that the "user" key existed, but it seems the correct way to do this is using `!photoJSON.isNull("user")` instead, to make sure it's there and isn't `null` as well. This took me a bit of digging to find the correct method to use.
 
+## Open Source Libraries Used
+
+* [James Smith's Android Asynchronous Http Client](http://loopj.com/android-async-http/)
+* [Square's Picasso](http://square.github.io/picasso/)
+
 ## License
 
     The MIT License (MIT)
